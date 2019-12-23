@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="93dp"
+        android:paddingBottom="1dp"
+        android:layout_height="94dp">
+
+
+    <ImageView
+            android:layout_width="93dp"
+            android:layout_height="93dp"
+            android:id="@+id/ivContent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+    <View
+            android:layout_width="93dp"
+            android:layout_height="93dp"
+            android:background="#88000000"
+            android:id="@+id/viewCover"
+            android:visibility="gone"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+    <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/r10_green_normal"
+            android:id="@+id/ivSelect"
+            android:padding="6dp"
+            app:layout_constraintEnd_toEndOf="@+id/ivContent"
+            app:layout_constraintTop_toTopOf="@+id/ivContent"/>
+    <TextView
+            android:text="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvNumber"
+            android:textSize="14dp"
+            android:textColor="#ffffff"
+            app:layout_constraintTop_toTopOf="@+id/ivSelect"
+            app:layout_constraintBottom_toBottomOf="@+id/ivSelect"
+            app:layout_constraintEnd_toEndOf="@+id/ivSelect"
+            app:layout_constraintStart_toStartOf="@+id/ivSelect"/>
+
+
+</android.support.constraint.ConstraintLayout>

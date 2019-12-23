@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             xmlns:tools="http://schemas.android.com/tools"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="wrap_content">
+
+    <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/ic_launcher_background"
+            android:id="@+id/iv_left_head"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:src="@mipmap/left_message"
+            android:id="@+id/imageView"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_left_head"
+            app:layout_constraintTop_toTopOf="@+id/iv_left_head"
+            app:layout_constraintStart_toEndOf="@+id/iv_left_head"/>
+    <TextView
+            android:text="说点什么说点什么说"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:id="@+id/tv_left_message"
+            android:maxWidth="250dp"
+            android:textIsSelectable="true"
+            android:minHeight="35dp"
+            android:textColor="#000000"
+            android:padding="8dp"
+            android:background="@drawable/r8_white_normal"
+            app:layout_constraintTop_toTopOf="@+id/iv_left_head"
+            app:layout_constraintStart_toEndOf="@+id/iv_left_head"
+            android:layout_marginLeft="9dp"/>
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/test_h"
+            android:scaleType="fitStart"
+            android:maxWidth="150dp"
+            android:maxHeight="150dp"
+            android:adjustViewBounds="true"
+            android:id="@+id/iv_left_message"
+            android:visibility="gone"
+            app:layout_constraintTop_toTopOf="@+id/iv_left_head"
+            app:layout_constraintStart_toEndOf="@+id/iv_left_head"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"/>
+
+    <android.support.constraint.Group
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/groupLeft"
+            app:constraint_referenced_ids="imageView,tv_left_message"/>
+
+</android.support.constraint.ConstraintLayout>

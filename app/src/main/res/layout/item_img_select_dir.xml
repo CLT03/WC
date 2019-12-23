@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        android:id="@+id/cl"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:background="@drawable/ra_black"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+    <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/ivContent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+    <TextView
+            android:text="路径"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvDir"
+            android:textSize="15dp"
+            android:textColor="#ffffff"
+            app:layout_constraintTop_toTopOf="@+id/ivContent"
+            app:layout_constraintBottom_toBottomOf="@+id/ivContent" app:layout_constraintStart_toEndOf="@+id/ivContent"
+            android:layout_marginStart="15dp"/>
+    <TextView
+            android:text=""
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvNumber"
+            android:textSize="15dp"
+            android:layout_marginStart="7dp"
+            android:textColor="#777777"
+            app:layout_constraintTop_toTopOf="@+id/tvDir"
+            app:layout_constraintBottom_toBottomOf="@+id/tvDir"
+            app:layout_constraintStart_toEndOf="@+id/tvDir"
+    />
+
+    <View android:layout_width="0dp"
+          app:layout_constraintStart_toStartOf="@+id/tvDir"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintBottom_toBottomOf="parent"
+          android:background="#454545"
+          android:layout_height="1dp" android:id="@+id/view"/>
+    <ImageView
+            android:layout_width="40dp"
+            android:layout_height="20dp"
+            android:src="@mipmap/yes"
+            android:id="@+id/ivSelect"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/ivContent"
+            app:layout_constraintTop_toTopOf="@+id/ivContent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="15dp"/>
+
+
+</android.support.constraint.ConstraintLayout>

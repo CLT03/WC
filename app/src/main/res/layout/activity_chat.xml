@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#EFEFEF"
+        tools:context=".activity.ChatActivity">
+
+    <TextView
+            android:text="静态聊天室"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="40dp"
+            android:textColor="#1e1e1e"
+            android:textSize="16dp"
+            android:background="@drawable/gray_b1"
+            android:textStyle="bold"
+            android:id="@+id/tvTitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+    <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+            app:layout_constraintBottom_toTopOf="@+id/viewBottom"
+            app:layout_constraintEnd_toEndOf="parent" android:id="@+id/linearLayout">
+
+        <android.support.v7.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:overScrollMode="never"
+                android:id="@+id/recyclerView"/>
+
+    </LinearLayout>
+
+    <android.support.constraint.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/viewBottom"
+            android:paddingTop="7dp"
+            android:paddingBottom="7dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:background="@drawable/gray_t1">
+
+        <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:minHeight="36dp"
+                android:id="@+id/edtMessage"
+                android:maxHeight="100dp"
+                android:textColor="#000000"
+                android:textSize="16dp"
+                android:background="@drawable/r8_white_normal"
+                app:layout_constraintStart_toStartOf="@+id/viewBottom"
+                app:layout_constraintTop_toTopOf="@+id/viewBottom"
+                android:layout_marginLeft="15dp"
+                android:layout_marginStart="15dp"
+                app:layout_constraintEnd_toStartOf="@+id/barrier"
+                android:layout_marginRight="5dp"
+                android:layout_marginEnd="11dp"/>
+
+
+        <ImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                app:srcCompat="@drawable/more"
+                android:id="@+id/ivMore"
+                android:padding="4dp"
+                app:layout_constraintEnd_toEndOf="@+id/viewBottom"
+                android:layout_marginRight="11dp"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+                android:text="发送"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:id="@+id/tvSend"
+                android:textSize="16dp"
+                android:textColor="#ffffff"
+                android:background="@drawable/r3_green_normal"
+                android:gravity="center"
+                android:layout_marginBottom="3dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginRight="15dp"
+                android:layout_marginEnd="15dp"/>
+
+        <android.support.constraint.Barrier
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/barrier"
+                app:barrierDirection="left"
+                app:constraint_referenced_ids="ivMore,tvSend"
+                tools:layout_editor_absoluteX="480dp"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+    <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:id="@+id/viewHideKeyW"
+            app:layout_constraintTop_toTopOf="parent"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/viewBottom"/>
+    <ImageView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:id="@+id/ivScale"
+            android:background="#000000"
+            android:visibility="gone"
+            android:scaleType="fitCenter"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    <ImageView
+            android:layout_width="0dp"
+            android:layout_height="0dp" android:src="@mipmap/back"
+            android:id="@+id/ivBack"
+            android:paddingLeft="10dp"
+            android:paddingRight="20dp"
+            android:paddingTop="17dp"
+            android:paddingBottom="17dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvTitle"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintDimensionRatio="1:1"/>
+
+
+</android.support.constraint.ConstraintLayout>
